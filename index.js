@@ -1,12 +1,11 @@
 // Libraries
-const Elo = require('arpad')
+
 const { cloneDeep } = require('lodash')
 const fs = require('fs')
+var EloRating = require('elo-rating')
 
 // Input Data
 const games = require('./games.json')
-
-const elo = new Elo()
 
 // Temp Object
 let players = {}
@@ -33,8 +32,10 @@ games.forEach(({ winner, loser }) => {
   }
 
   // Elo Rank
-  players[winner.name].rank = elo.newRatingIfWon(players[winner.name].rank, players[loser.name].rank)
-  players[loser.name].rank = elo.newRatingIfLost(players[loser.name].rank, players[winner.name].rank)
+  let { playerRating, opponentRating } = EloRating.calculate(players[winner.name].rank, players[loser.name].rank)
+
+  players[winner.name].rank = playerRating
+  players[loser.name].rank = opponentRating
 
   // Career points won & lost || (Every game played)
   players[winner.name].points.won += winner.points
