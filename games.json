@@ -1,14 +1,38 @@
 [
-  { "winner": { "name": "Jim A", "points": 24 }, "loser": { "name": "Daniel M", "points": 22 } },
-  { "winner": { "name": "Daniel M", "points": 21 }, "loser": { "name": "Jim A", "points": 18 } },
-  { "winner": { "name": "Daniel M", "points": 21 }, "loser": { "name": "Jim A", "points": 14 } },
-
-  { "winner": { "name": "Jim A", "points": 21 }, "loser": { "name": "Daniel M", "points": 18 } },
-  { "winner": { "name": "Jim A", "points": 21 }, "loser": { "name": "Daniel M", "points": 17 } },
-
-  { "winner": { "name": "Jim A", "points": 21 }, "loser": { "name": "Tim G", "points": 12 } },
-
-  { "winner": { "name": "Jim A", "points": 21 }, "loser": { "name": "Tim G", "points": 18 } },
-  { "winner": { "name": "Tim G", "points": 21 }, "loser": { "name": "Jim A", "points": 18 } },
-  { "winner": { "name": "Jim A", "points": 21 }, "loser": { "name": "Tim G", "points": 10 } }
+  {
+    "winner": { "name": "Jim A", "points": 24 },
+    "loser": { "name": "Daniel M", "points": 22 }
+  },
+  {
+    "winner": { "name": "Daniel M", "points": 21 },
+    "loser": { "name": "Jim A", "points": 18 }
+  },
+  {
+    "winner": { "name": "Daniel M", "points": 21 },
+    "loser": { "name": "Jim A", "points": 14 }
+  },
+  {
+    "winner": { "name": "Jim A", "points": 21 },
+    "loser": { "name": "Daniel M", "points": 18 }
+  },
+  {
+    "winner": { "name": "Jim A", "points": 21 },
+    "loser": { "name": "Daniel M", "points": 17 }
+  },
+  {
+    "winner": { "name": "Jim A", "points": 21 },
+    "loser": { "name": "Tim G", "points": 12 }
+  },
+  {
+    "winner": { "name": "Jim A", "points": 21 },
+    "loser": { "name": "Tim G", "points": 18 }
+  },
+  {
+    "winner": { "name": "Tim G", "points": 21 },
+    "loser": { "name": "Jim A", "points": 18 }
+  },
+  {
+    "winner": { "name": "Jim A", "points": 21 },
+    "loser": { "name": "Tim G", "points": 10 }
+  }
 ]

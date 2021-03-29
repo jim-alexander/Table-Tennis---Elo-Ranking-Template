@@ -22,19 +22,19 @@ let initial_rank = {
 }
 
 games.forEach(({ winner, loser }) => {
-  let newPlayer = { score: 400, points: { won: 0, lost: 0 }, games: { played: 0, won: 0, lost: 0 } }
+  let newPlayer = { rank: 400, points: { won: 0, lost: 0 }, games: { played: 0, won: 0, lost: 0 } }
   if (!players[winner.name]) {
     players[winner.name] = cloneDeep(newPlayer)
-    initial_rank[winner.name] && (players[winner.name].score = initial_rank[winner.name]) //Check player has initial score
+    initial_rank[winner.name] && (players[winner.name].rank = initial_rank[winner.name]) //Check player has initial score
   }
   if (!players[loser.name]) {
     players[loser.name] = cloneDeep(newPlayer)
-    initial_rank[loser.name] && (players[loser.name].score = initial_rank[loser.name]) //Check player has initial score
+    initial_rank[loser.name] && (players[loser.name].rank = initial_rank[loser.name]) //Check player has initial score
   }
 
-  // Score
-  players[winner.name].score = elo.newRatingIfWon(players[winner.name].score, players[loser.name].score)
-  players[loser.name].score = elo.newRatingIfLost(players[loser.name].score, players[winner.name].score)
+  // Elo Rank
+  players[winner.name].rank = elo.newRatingIfWon(players[winner.name].rank, players[loser.name].rank)
+  players[loser.name].rank = elo.newRatingIfLost(players[loser.name].rank, players[winner.name].rank)
 
   // Career points won & lost || (Every game played)
   players[winner.name].points.won += winner.points
